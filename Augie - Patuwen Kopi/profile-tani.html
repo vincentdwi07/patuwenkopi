@@ -234,6 +234,8 @@
   </div>
 </div>
     <div id="footer"></div>
+    <div id="float"></div>
+
 
     <script>
       const dropdownMenuButton = document.getElementById("dropdownMenuButton");
@@ -285,6 +287,12 @@
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;
+        });
+
+        fetch("float-icons.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("float").innerHTML = data;
         });
     </script>
   </body>

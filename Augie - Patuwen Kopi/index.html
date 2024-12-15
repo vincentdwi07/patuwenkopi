@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -199,6 +199,7 @@
     </div>
 
     <div id="footer"></div>
+    <div id="float"></div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -231,6 +232,12 @@
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footer").innerHTML = data;
+        });
+
+      fetch("float-icons.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("float").innerHTML = data;
         });
     </script>
 
